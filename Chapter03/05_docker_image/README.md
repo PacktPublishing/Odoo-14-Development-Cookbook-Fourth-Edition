@@ -1,0 +1,1 @@
+### See latest information about the docker image here: https://hub.docker.com/_/odoo
