@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Book Form View inherit -->
+    <record id="library_book_view_form_inh" model="ir.ui.view">
+        <field name="name">Library Book Form</field>
+        <field name="model">library.book</field>
+        <field name="inherit_id" ref="my_library.library_book_view_form"/>
+        <field name="arch" type="xml">
+            <field name="author_ids" position="after">
+                <field name="date_return"/>
+            </field>
+        </field>
+    </record>
+
+
+    <!-- Book Category Form View inherit -->
+    <record id="library_book_category_view_form_inh" model="ir.ui.view">
+        <field name="name">Library Book Category Form</field>
+        <field name="model">library.book.category</field>
+        <field name="inherit_id" ref="my_library.library_book_category_view_form"/>
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <field name="max_borrow_days"/>
+            </field>
+        </field>
+    </record>
+
+
+</odoo>
