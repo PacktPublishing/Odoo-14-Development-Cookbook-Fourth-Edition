@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="base.main_company" model="res.company">
+        <field name="name">Packt publishing</field>
+    </record>
+
+    <record id="book_cookbook" model="library.book">
+        <field name="name"> Odoo 14 Development Cookbook </field>
+    </record>
+
+</odoo>
