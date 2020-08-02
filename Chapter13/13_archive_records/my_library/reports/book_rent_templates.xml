@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="book_rents_template">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+            <t t-call="web.internal_layout">
+                <div class="page">
+                    <h1>Book Rent for <t t-esc="doc.name"/></h1>
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Expected return date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="doc.rent_ids" t-as="rent" >
+                                <td><t t-esc="rent.book_id.name" /></td>
+                                <td><t t-esc="rent.return_date" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </t>
+</template>
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report id="report_book_rent"
+        name="my_library.book_rents_template"
+        model="res.partner"
+        string="Book Rents"
+        report_type="qweb-pdf" />
+</odoo>
