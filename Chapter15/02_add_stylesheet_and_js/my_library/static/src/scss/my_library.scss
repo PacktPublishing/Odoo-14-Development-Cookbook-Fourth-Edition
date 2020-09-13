@@ -1,0 +1,16 @@
+$my-bg-color: #1C2529;
+$my-text-color: #D3F4FF;
+
+
+nav.navbar {
+    background-color: $my-bg-color !important;
+    .navbar-nav .nav-link span{
+        color: darken($my-text-color, 15);
+        font-weight: 600;
+    }
+}
+
+footer.o_footer {
+    background-color: $my-bg-color !important;
+    color: $my-text-color;
+}
