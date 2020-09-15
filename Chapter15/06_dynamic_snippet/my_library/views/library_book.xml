@@ -16,25 +16,23 @@
         <field name="model">library.book</field>
         <field name="arch" type="xml">
             <form>
-                <form>
-                    <sheet>
-                        <field name="image" widget='image' class="oe_avatar"/>
-                        <div class="oe_title">
-                            <label for="name" class="oe_edit_only"/>
-                            <h1>
-                                <field name="name"/>
-                            </h1>
-                        </div>
+                <sheet>
+                    <field name="image" widget='image' class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
                         <group>
-                            <group>
-                                <field name="author_ids" widget="many2many_tags"/>
-                            </group>
-                            <group>
-                                <field name="date_release"/>
-                            </group>
+                            <field name="author_ids" widget="many2many_tags"/>
                         </group>
-                    </sheet>
-                </form>
+                        <group>
+                            <field name="date_release"/>
+                        </group>
+                    </group>
+                </sheet>
             </form>
         </field>
     </record>

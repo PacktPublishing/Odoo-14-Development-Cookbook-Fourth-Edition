@@ -30,7 +30,17 @@
                         </group>
                         <group>
                             <field name="date_release"/>
+                            <field name="restrict_country_ids" widget="many2many_tags"/>
                         </group>
+                    </group>
+                    <group string="Book Issues">
+                        <field name="book_issue_ids" nolabel="1">
+                            <tree name="Book isuues">
+                                <field name="create_date"/>
+                                <field name="submitted_by"/>
+                                <field name="issue_description"/>
+                            </tree>
+                        </field>
                     </group>
                 </sheet>
             </form>
