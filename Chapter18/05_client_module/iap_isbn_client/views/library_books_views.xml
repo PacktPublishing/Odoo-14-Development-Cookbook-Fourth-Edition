@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="library_book_view_form_inh" model="ir.ui.view">
+        <field name="name">Library Book Form</field>
+        <field name="model">library.book</field>
+        <field name="inherit_id" ref="my_library.library_book_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="before">
+                <header>
+                    <button name="fetch_book_data" string="Fetch Book Data" type="object"/>
+                </header>
+            </xpath>
+            <field name="date_release" position="after">
+                <field name="isbn"/>
+                <field name="cover_image" widget="image" class="oe_avatar"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

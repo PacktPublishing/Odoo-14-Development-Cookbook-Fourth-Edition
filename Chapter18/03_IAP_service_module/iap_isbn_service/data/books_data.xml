@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="book_info_data_1" model="book.info">
+        <field name="name">Learning PostgreSQL 10</field>
+        <field name="isbn">1788392019</field>
+        <field name="author_ids" eval="[(0, 0, {'name': 'Salahaldin Juba'}), (0, 0, {'name': 'Andrey Volkov'})]"/>
+        <field name="date_release">2017-12-01</field>
+        <field name="cover_image" type="base64" file="iap_isbn_service/static/img/postgres.jpg"/>
+    </record>
+
+    <record id="book_info_data_2" model="book.info">
+        <field name="name">Odoo 12 Development Cookbook</field>
+        <field name="isbn">9781789532470</field>
+        <field name="author_ids" eval="[(0, 0, {'name': 'Parth Gajjar'}), (0, 0, {'name': 'Alexandre Fayolle'}), (0, 0, {'name': 'Daniel Reis'}), (0, 0, {'name': 'Holger Brunn'})]"/>
+        <field name="date_release">2019-04-20</field>
+        <field name="cover_image" type="base64" file="iap_isbn_service/static/img/odoo.png"/>
+    </record>
+
+</odoo>

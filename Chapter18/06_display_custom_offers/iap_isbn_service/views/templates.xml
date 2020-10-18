@@ -1,0 +1,44 @@
+<odoo>
+    <template id="no_credit_info" name="No credit info">
+       <section class="jumbotron text-center bg-primary">
+            <div class="container pb32 pt32">
+                <h1 class="jumbotron-heading">Library ISBN</h1>
+                <p class="lead text-muted">
+                    Get full book information with cover image just by the ISBN number.
+                </p>
+                <span class="badge badge-warning" style="font-size: 30px;">
+                    20% Off
+                </span>
+            </div>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <i class="fa fa-database"/> Large books database
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                We have largest book databse. It contains more then 2500000+ books.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <i class="fa fa-image"/>
+                            With cover image
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                More then 95% of our books having high quality book cover images.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</odoo>
