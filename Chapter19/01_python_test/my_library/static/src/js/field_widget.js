@@ -10,7 +10,7 @@ odoo.define('my_field_widget', function (require) {
         supportedFieldTypes: ['integer'],
         events: {
             'click .o_color_pill': 'clickPill',
-        // },
+        },
         init: function () {
             this.totalColors = 10;
             this._super.apply(this, arguments);

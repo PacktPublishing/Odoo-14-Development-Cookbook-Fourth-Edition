@@ -32,7 +32,7 @@ QUnit.module('Color Picker Tests', {
     }
     }, function () {
 
-    QUnit.only('int_color field test cases', async function (assert) {
+    QUnit.test('int_color field test cases', async function (assert) {
         assert.expect(2);
 
         var form = await testUtils.createView({
