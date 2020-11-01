@@ -9,6 +9,7 @@ var _t = core._t;
 
 tour.register('library_tour', {
     url: "/web",
+    test: true,
     rainbowManMessage: _t("Congrats, you have listed a book."),
     sequence: 5,
     }, [tour.stepUtils.showAppsMenuItem(), {
