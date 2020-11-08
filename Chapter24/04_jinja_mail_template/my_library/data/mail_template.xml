@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="book_return_reminder" model="mail.template">
+        <field name="name">Book Return Reminder</field>
+        <field name="email_from">${object.book_id.create_uid.email}</field>
+        <field name="email_to">${object.borrower_id.email}</field>
+        <field name="subject">Reminder for book return</field>
+        <field name="model_id" ref="my_library.model_library_book_rent"/>
+        <field name="body_html">
+            <![CDATA[
+                <p>Dear ${object.borrower_id.name},</p>
+                <p>You had rented the
+                    <b>${object.book_id.name}</b> book on ${format_date(object.rent_date)}
+                <br/>
+                The due date of book is <b style="color:red;">${format_date(object.return_date)}.</b>
+                </p>
+                <br/>
+
+                <p>Best regards,
+                <br/> Librarian</p>
+            ]]>
+        </field>
+    </record>
+</odoo>
