@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="BtnDiscount">
+        <div class='control-button'>
+            <i class='fa fa-gift' /> 5% discount
+        </div>
+    </t>
+    <t t-name="LastOrders">
+        <div class='control-button'>
+            <i class='fa fa-shopping-cart' /> Last orders
+        </div>
+    </t>
+    <t t-extend="Product">
+        <t t-jquery=".price-tag" t-operation="after">
+            <span t-if="product.standard_price" class="sale_margin">
+                <t t-set="margin" t-value="product.list_price - product.standard_price"/>
+                <t t-esc="widget.format_currency(margin)"/>
+            </span>
+        </t>
+    </t>
+
+</templates>
