@@ -22,17 +22,14 @@ class LibraryBook(models.Model):
         return result
 
     @api.model
-    def _name_search(self, name='', args=None, operator='ilike',
-                     limit=100, name_get_uid=None):
+    def _name_search(self, name='', args=None, operator='ilike', limit=100, name_get_uid=None):
         args = [] if args is None else args.copy()
         if not(name == '' and operator == 'ilike'):
-            args += ['|', '|',
+            args += ['|', '|', '|',
                 ('name', operator, name),
                 ('isbn', operator, name),
                 ('author_ids.name', operator, name)
             ]
-            books_ids = self.search(args).ids
-            return self.browse(books_ids).name_get()
         return super(LibraryBook, self)._name_search(
             name=name, args=args, operator=operator,
             limit=limit, name_get_uid=name_get_uid)

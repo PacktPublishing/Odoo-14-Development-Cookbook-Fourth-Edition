@@ -5,7 +5,7 @@
     'author': "Parth Gajjar",
     'website': "http://www.example.com",
     'category': 'Uncategorized',
-    'version': '13.0.1',
+    'version': '14.0.1',
     'depends': ['base', 'account'],
     'data': [
         'views/my_contacts.xml',

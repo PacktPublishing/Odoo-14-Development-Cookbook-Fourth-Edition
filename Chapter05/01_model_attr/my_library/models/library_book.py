@@ -5,7 +5,7 @@ from odoo import models, fields
 class LibraryBook(models.Model):
     _name = 'library.book'
     _description = 'Library Book'
-
+    _rec_name = 'short_name'
     _order = 'date_release desc, name'
 
     name = fields.Char('Title', required=True)

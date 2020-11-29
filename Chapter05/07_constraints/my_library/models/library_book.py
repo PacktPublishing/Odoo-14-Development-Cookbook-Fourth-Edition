@@ -53,7 +53,7 @@ class LibraryBook(models.Model):
 
     _sql_constraints = [
         ('name_uniq', 'UNIQUE (name)', 'Book title must be unique.'),
-        ('positive_page', 'CHECK(pages>0)', 'No of pages must be positive')
+        ('positive_page', 'CHECK(pages > 0)', 'No of pages must be positive')
     ]
 
     @api.constrains('date_release')

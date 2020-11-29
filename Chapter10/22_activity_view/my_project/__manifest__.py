@@ -5,7 +5,7 @@
     'author': "Parth Gajjar",
     'website': "http://www.example.com",
     'category': 'Project',
-    'version': '13.0.1',
+    'version': '14.0.1',
     'depends': ['project'],
     'data': [
         'views/my_tasks.xml',
