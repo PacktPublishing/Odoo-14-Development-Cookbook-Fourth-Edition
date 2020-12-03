@@ -10,9 +10,9 @@ class LibraryReturnWizard(models.TransientModel):
     book_ids = fields.Many2many('library.book', string='Books', compute="onchange_member", readonly=False)
 
     def books_returns(self):
-        loan = self.env['library.book.rent']
+        loanModel = self.env['library.book.rent']
         for rec in self:
-            loans = loan.search(
+            loans = loanModel.search(
                 [('state', '=', 'ongoing'),
                  ('book_id', 'in', rec.book_ids.ids),
                  ('borrower_id', '=', rec.borrower_id.id)]

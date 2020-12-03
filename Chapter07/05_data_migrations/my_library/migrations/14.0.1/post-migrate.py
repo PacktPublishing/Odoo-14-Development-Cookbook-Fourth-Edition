@@ -3,7 +3,7 @@ from odoo import fields
 from datetime import date
 
 # NOTE: This is just for demo purpose
-# This function invoked only if system already have 13.0.0 version installed
+# This function invoked only if system already have 14.0.0 version installed
 
 def migrate(cr, version):
     cr.execute('SELECT id, date_release_char FROM library_book')

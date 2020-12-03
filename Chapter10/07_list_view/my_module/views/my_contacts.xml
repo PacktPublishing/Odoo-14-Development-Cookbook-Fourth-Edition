@@ -7,6 +7,9 @@
         <field name="arch" type="xml">
             <tree decoration-bf="customer_rank &gt; 0" decoration-danger="supplier_rank &gt; 0" decoration-warning="customer_rank &gt; 0 and supplier_rank &gt; 0">
                 <field name="name" />
+                <field name="user_id" widget="many2one_avatar_user"/>
+                <field name="state_id" optional="hide"/>
+                <field name="country_id" optional="show"/>
                 <field name="customer_rank" invisible="1" />
                 <field name="supplier_rank" invisible="1" />
             </tree>
