@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Activate the french language to see the effect-->
+    <act_window id="action_all_customers_fr"
+        name="Tous les clients"
+        res_model="res.partner"
+        domain="[('customer_rank', '>', 0)]"
+        context="{'lang': 'fr_FR','default_lang': 'fr_FR', 'active_test': False, 'default_customer_rank': 1}" />
+
+    <menuitem id="menu_custom_top_level" name="My App menu" web_icon="my_module,static/description/icon.png"/>
+    <menuitem id="menu_all_customers" parent="menu_custom_top_level" action="action_all_customers_fr" sequence="10" />
+
+</odoo>

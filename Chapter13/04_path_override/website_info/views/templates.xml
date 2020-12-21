@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="show_website_info" inherit_id="website.show_website_info">
+        <xpath expr="//dl[@t-foreach='apps']" position="replace">
+            <table class="table">
+                <tr t-foreach="apps" t-as="app">
+                    <th>
+                        <a t-att-href="app.website">
+                            <t t-esc="app.name" />
+                        </a>
+                    </th>
+                    <td>
+                        <t t-esc="app.summary" />
+                    </td>
+                </tr>
+            </table>
+        </xpath>
+    </template>
+</odoo>

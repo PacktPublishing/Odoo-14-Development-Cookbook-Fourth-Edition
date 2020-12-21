@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="report_book_rent" model="ir.actions.report">
+        <field name="name">Book Rents</field>
+        <field name="model">res.partner</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">my_library.book_rents_template</field>
+        <field name="report_file">my_library.book_rents_template</field>
+    </record>
+
+</odoo>

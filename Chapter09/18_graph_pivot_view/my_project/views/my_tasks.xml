@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_project_tasks_graph" model="ir.ui.view">
+        <field name="model">project.task</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="user_id"/>
+                <field name="stage_id"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_project_tasks_pivot" model="ir.ui.view">
+        <field name="model">project.task</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="user_id" type="row"/>
+                <field name="project_id" type="col"/>
+                <field name="stage_id" type="col"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id='action_my_tasks' model='ir.actions.act_window'>
+        <field name="name">My tasks</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">tree,graph,pivot,form</field>
+        <field name="context">{'graph_view_ref': 'my_project.view_project_tasks_graph', 'pivot_view_ref': 'my_project.view_project_tasks_pivot'}</field>
+    </record>
+
+    <menuitem id="menu_custom_top_level" name="My Tasks" web_icon="my_project,static/description/icon.png"/>
+    <menuitem id="menu_my_tasks" parent="menu_custom_top_level" action="action_my_tasks" sequence="10" />
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="FieldColorPills">
+        <t t-foreach="widget.totalColors" t-as='pill_no'>
+            <span t-attf-class="o_color_pill o_color_#{pill_no} #{widget.value === pill_no and 'active' or ''}" t-att-data-val="pill_no"/>
+        </t>
+    </t>
+</templates>

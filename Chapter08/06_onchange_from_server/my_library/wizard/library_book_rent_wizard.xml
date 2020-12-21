@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<record id='library_rent_wizard_form' model='ir.ui.view'>
+    <field name='name'>library rent wizard form view</field>
+    <field name='model'>library.rent.wizard</field>
+    <field name='arch' type='xml'>
+        <form string="Borrow books">
+            <sheet>
+                <group>
+                    <field name='borrower_id'/>
+                </group>
+                <group>
+                    <field name='book_ids'/>
+                </group>
+            </sheet>
+            <footer>
+                <button string='Rent' name='add_book_rents' class='btn-primary' type='object'/>
+                <button string='Cancel' class='btn-default' special='cancel'/>
+            </footer>
+        </form>
+    </field>
+</record>
+
+<act_window id="action_wizard_rent_books" name="Give on Rent" res_model="library.rent.wizard" view_mode="form" target="new" />
+<menuitem id="menu_wizard_rent_books" parent="library_base_menu" action="action_wizard_rent_books" sequence="20" />
+
+</odoo>

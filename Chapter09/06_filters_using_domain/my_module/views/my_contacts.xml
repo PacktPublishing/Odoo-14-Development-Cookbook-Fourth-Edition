@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Activate the french language to see the effect-->
+<record id="action_my_customers" model="ir.actions.act_window">
+    <field name="name">All my customers who don't speak French</field>
+    <field name="res_model">res.partner</field>
+    <field name="domain">
+            [('type', '=', 'contact'), ('user_id', '=', uid), ('lang', '!=', 'fr_FR')]
+    </field>
+</record>
+
+<record id="action_no_email_or_phone" model="ir.actions.act_window">
+    <field name="name">Customers with no email or phone</field>
+    <field name="res_model">res.partner</field>
+    <field name="domain">['|', ('phone', '=', False), ('email', '=', False)]</field>
+</record>
+
+<menuitem id="menu_custom_top_level" name="My App menu" web_icon="my_module,static/description/icon.png"/>
+<menuitem id="menu_my_customers" parent="menu_custom_top_level" action="action_my_customers" sequence="9" />
+<menuitem id="menu_no_email_or_phone" parent="menu_custom_top_level" action="action_no_email_or_phone" sequence="10" />
+
+</odoo>

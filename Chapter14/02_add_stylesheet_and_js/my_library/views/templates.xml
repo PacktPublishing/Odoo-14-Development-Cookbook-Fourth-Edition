@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_frontend" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <link href="/my_library/static/src/css/my_library.css" rel="stylesheet" type="text/css"/>
+            <link href="/my_library/static/src/scss/my_library.scss" rel="stylesheet" type="text/scss"/>
+
+            <script src="/my_library/static/src/js/my_library.js" type="text/javascript" />
+        </xpath>
+    </template>
+</odoo>

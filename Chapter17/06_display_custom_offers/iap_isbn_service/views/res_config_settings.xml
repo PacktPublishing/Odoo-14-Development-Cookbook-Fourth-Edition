@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_general_config_isbn_service" model="ir.ui.view">
+        <field name="name">Configuration: IAP service ksy</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <div id="business_documents" position="before">
+                <h2>IAP Books ISBN service</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">IAP service key</span>
+                            <div class="text-muted">
+                            Generate service in odoo IAP and add service key here
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16 row">
+                                    <label for="isbn_service_key" class="col-3 col-lg-3 o_light_label"/>
+                                    <field name="isbn_service_key" class="oe_inline" required="1"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>
