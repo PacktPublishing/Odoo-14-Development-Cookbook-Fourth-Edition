@@ -16,26 +16,16 @@
         <field name="model">library.book</field>
         <field name="arch" type="xml">
             <form>
-                <header>
-                    <button name="make_available" string="Make Available" type="object" />
-                    <button name="make_borrowed" string="Make Borrowed" type="object" />
-                    <button name="make_lost" string="Make Lost" type="object" />
-                    <field name="state" widget="statusbar"/>
-                </header>
-                <sheet>
+                <group>
                     <group>
-                        <group>
-                            <field name="name"/>
-                            <field name="category_id"/>
-                            <field name="cost_price"/>
-                        </group>
-                        <group>
-                            <field name="date_release"/>
-                            <field name="active"/>
-                            <field name="author_ids" widget="many2many_tags"/>
-                        </group>
+                        <field name="name"/>
+                        <field name="author_ids" widget="many2many_tags"/>
                     </group>
-                </sheet>
+                    <group>
+                        <field name="short_name"/>
+                        <field name="date_release"/>
+                    </group>
+                </group>
             </form>
         </field>
     </record>

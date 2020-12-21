@@ -11,7 +11,7 @@ Description related to library.
     'website': "http://www.example.com",
     'category': 'Tools',
     'version': '14.0.1',
-    'depends': ['base', 'web'],
+    'depends': ['base', 'web', 'web_tour'],
 
     'data': [
         'security/groups.xml',

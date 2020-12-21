@@ -8,16 +8,4 @@
         </xpath>
     </template>
 
-    <template id="qunit_suite" name="colorpicker test" inherit_id="web.qunit_suite">
-        <xpath expr="." position="inside">
-            <script type="text/javascript" src="/my_library/static/tests/colorpicker_tests.js" />
-        </xpath>
-    </template>
-
-    <template id="assets_tests" name="Library Assets Tests" inherit_id="web.assets_tests">
-        <xpath expr="." position="inside">
-            <script type="text/javascript" src="/my_library/static/tests/my_library_tour.js" />
-        </xpath>
-    </template>
-
 </odoo>

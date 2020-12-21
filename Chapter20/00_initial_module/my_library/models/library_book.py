@@ -18,6 +18,8 @@ class LibraryBook(models.Model):
 
     def make_available(self):
         self.write({'state': 'available'})
+        return True
 
     def make_lost(self):
         self.write({'state': 'lost'})
+        return True

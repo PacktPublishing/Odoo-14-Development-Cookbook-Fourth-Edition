@@ -22,7 +22,6 @@
                         <field name="author_ids" widget="many2many_tags"/>
                     </group>
                     <group>
-                        <field name="short_name"/>
                         <field name="date_release"/>
                     </group>
                 </group>

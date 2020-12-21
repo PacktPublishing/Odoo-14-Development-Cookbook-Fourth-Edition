@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<templates>
-    <t t-name="FieldColorPills">
-        <t t-foreach="widget.totalColors" t-as='pill_no'>
-            <span t-attf-class="o_color_pill o_color_#{pill_no} #{widget.value === pill_no and 'active' or ''}" t-att-data-val="pill_no"
-            data-toggle="tooltip" data-placement="top" t-attf-title="This color is used in #{widget.colorGroupData[pill_no] or 0 } books."/>
-        </t>
-    </t>
-</templates>
