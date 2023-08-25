@@ -1,6 +1,3 @@
-
-
-
 # Odoo 14 Development Cookbook - Fourth Edition
 
 <a href="https://www.packtpub.com/product/odoo-14-development-cookbook-fourth-edition/9781800200319?utm_source=github&utm_medium=repository&utm_campaign=9781800200319"><img src="https://static.packt-cdn.com/products/9781800200319/cover/smaller" alt="Odoo 14 Development Cookbook - Fourth Edition" height="256px" align="right"></a>
@@ -47,6 +44,9 @@ With the following software and hardware list you can run all code files present
 | 1-24  | Odoo v14 | Ubuntu recommended (or any version of Linux) |
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781800200319_ColorImages.pdf).
+
+## Errata
+* Page 151: "With this, you will be able to add/modify business logins in the Odoo module." _should be_ "With this, you will be able to add/modify business logic in the Odoo module."
 
 ### Related products
 * The Art of CRM [[Packt]](https://www.packtpub.com/product/the-art-of-crm/9781789538922?utm_source=github&utm_medium=repository&utm_campaign=9781789538922) [[Amazon]](https://www.amazon.com/dp/1789538920)
